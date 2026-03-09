@@ -1,0 +1,34 @@
+/* FaithMade brand — primary: #69af95 */
+:root {
+  --ifm-color-primary: #69af95;
+  --ifm-color-primary-dark: #57a486;
+  --ifm-color-primary-darker: #4e9d7f;
+  --ifm-color-primary-darkest: #3d8168;
+  --ifm-color-primary-light: #7bbaa4;
+  --ifm-color-primary-lighter: #84beaa;
+  --ifm-color-primary-lightest: #a3cfc0;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #84beaa;
+  --ifm-color-primary-dark: #71b59e;
+  --ifm-color-primary-darker: #67b098;
+  --ifm-color-primary-darkest: #4a9f84;
+  --ifm-color-primary-light: #97c7b6;
+  --ifm-color-primary-lighter: #a1ccbc;
+  --ifm-color-primary-lightest: #bed9d1;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: none;
+}
+
+.footer--light {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  background: #f8f9fa;
+}
