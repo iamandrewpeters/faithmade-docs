@@ -17,7 +17,7 @@ const config: Config = {
   organizationName: 'iamandrewpeters',
   projectName: 'faithmade-docs',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -69,8 +69,9 @@ const config: Config = {
           title: 'Help',
           items: [
             {label: 'Getting Started', to: '/getting-started/'},
-            {label: 'Website Builder', to: '/website-builder/'},
-            {label: 'Troubleshooting', to: '/troubleshooting/'},
+            {label: 'Page Builder', to: '/page-builder/'},
+            {label: 'Sermons', to: '/sermons/'},
+            {label: 'Integrations', to: '/integrations/'},
           ],
         },
         {

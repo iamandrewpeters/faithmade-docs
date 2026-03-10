@@ -7,44 +7,68 @@ const categories = [
   {
     icon: '🚀',
     title: 'Getting Started',
-    description: 'Launch your church website, connect your domain, and set up your account.',
+    description: 'Set up your account, pick a starter site, and get your church website live.',
     link: '/getting-started/',
   },
   {
-    icon: '💳',
-    title: 'Account & Billing',
-    description: 'Manage your subscription, update payment info, and understand your plan.',
-    link: '/account-billing/',
+    icon: '📝',
+    title: 'Content Management',
+    description: 'Manage your staff page, blog posts, and site-wide announcements.',
+    link: '/content-management/',
+  },
+  {
+    icon: '📅',
+    title: 'Events',
+    description: 'Create events, manage registration, set locations, and handle recurring events.',
+    link: '/events/',
+  },
+  {
+    icon: '🎙️',
+    title: 'Sermons',
+    description: 'Add sermons, manage series, import your library, and add sermon notes.',
+    link: '/sermons/',
+  },
+  {
+    icon: '👥',
+    title: 'Groups',
+    description: 'Set up small groups, assign leaders, manage locations, and share guides.',
+    link: '/groups/',
+  },
+  {
+    icon: '🤝',
+    title: 'Connect Points',
+    description: 'Build connect flows and info cards that guide visitors to take next steps.',
+    link: '/connect-points/',
   },
   {
     icon: '🏗️',
-    title: 'Website Builder',
-    description: 'Build and edit pages, add content blocks, and manage your site structure.',
-    link: '/website-builder/',
+    title: 'Page Builder',
+    description: 'Build and edit pages with the drag-and-drop page builder.',
+    link: '/page-builder/',
   },
   {
     icon: '🎨',
-    title: 'Design & Themes',
-    description: 'Customize colors, fonts, layouts, and your church site\'s overall look.',
-    link: '/design-themes/',
+    title: 'Design',
+    description: 'Customize colors, fonts, logo, header, and footer in the Customizer.',
+    link: '/design/',
+  },
+  {
+    icon: '🔍',
+    title: 'SEO',
+    description: 'Configure global SEO settings, per-page fields, and custom scripts.',
+    link: '/seo/',
+  },
+  {
+    icon: '🛠️',
+    title: 'Tools',
+    description: 'Work with forms, resources, and other built-in site tools.',
+    link: '/tools/',
   },
   {
     icon: '🔗',
     title: 'Integrations',
-    description: 'Connect Planning Center, streaming platforms, and other ministry tools.',
+    description: 'Connect Planning Center, Google Analytics, YouTube, and more.',
     link: '/integrations/',
-  },
-  {
-    icon: '🔧',
-    title: 'Troubleshooting',
-    description: 'Fix common issues, clear errors, and get your site back on track.',
-    link: '/troubleshooting/',
-  },
-  {
-    icon: '✅',
-    title: 'Best Practices',
-    description: 'Tips and recommendations for getting the most out of FaithMade.',
-    link: '/best-practices/',
   },
 ];
 
@@ -66,7 +90,6 @@ export default function Home() {
               type="text"
               placeholder="Search for answers..."
               onFocus={(e) => {
-                // Trigger Docusaurus search if available
                 const btn = document.querySelector('.DocSearch-Button') as HTMLElement;
                 if (btn) { e.currentTarget.blur(); btn.click(); }
               }}

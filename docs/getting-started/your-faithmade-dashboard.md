@@ -1,0 +1,27 @@
+---
+sidebar_position: 1
+---
+
+# Your Faithmade Dashboard
+
+Your dashboard is home base. Everything you need to run your church website lives right here.
+
+## What You'll See
+
+When you log in, you land on your Faithmade dashboard — a clean, custom space built just for churches.
+
+Your sidebar has two main tabs:
+
+**Content** is where you manage sermons, events, groups, blog posts, staff, and all the good stuff your congregation actually cares about.
+
+**Design** is where you tweak your site's look, edit pages, update menus, and make everything look great.
+
+The main area gives you quick shortcuts to your church info, site styling, giving setup, and stat cards so you can see what's happening at a glance.
+
+## Pro Tip
+
+Bookmark your dashboard URL. It's always at `yoursite.com/wp-admin`. Way easier than hunting for the login page every Monday morning before coffee kicks in.
+
+Your dashboard is designed to be the one place you never have to leave. Everything's a click or two away.
+
+**Need help finding something?** Hit us up in chat — we'll point you in the right direction.
