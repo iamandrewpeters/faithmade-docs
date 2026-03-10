@@ -68,10 +68,10 @@ const config: Config = {
         {
           title: 'Help',
           items: [
-            {label: 'Getting Started', to: '/getting-started/'},
-            {label: 'Page Builder', to: '/page-builder/'},
-            {label: 'Sermons', to: '/sermons/'},
-            {label: 'Integrations', to: '/integrations/'},
+            {label: 'Getting Started', to: '/getting-started/your-faithmade-dashboard'},
+            {label: 'Page Builder', to: '/page-builder/understanding-your-site-pages'},
+            {label: 'Sermons', to: '/sermons/adding-a-new-sermon'},
+            {label: 'Integrations', to: '/integrations/connecting-planning-center'},
           ],
         },
         {
