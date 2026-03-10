@@ -17,7 +17,7 @@ const config: Config = {
   organizationName: 'iamandrewpeters',
   projectName: 'faithmade-docs',
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
