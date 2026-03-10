@@ -68,9 +68,9 @@ const config: Config = {
         {
           title: 'Help',
           items: [
-            {label: 'Getting Started', to: '/getting-started'},
-            {label: 'Website Builder', to: '/website-builder'},
-            {label: 'Troubleshooting', to: '/troubleshooting'},
+            {label: 'Getting Started', to: '/getting-started/'},
+            {label: 'Website Builder', to: '/website-builder/'},
+            {label: 'Troubleshooting', to: '/troubleshooting/'},
           ],
         },
         {

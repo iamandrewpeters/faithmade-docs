@@ -3,6 +3,12 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   docsSidebar: [
     {
+      type: 'doc',
+      id: 'index',
+      label: 'Home',
+      className: 'sidebar-home',
+    },
+    {
       type: 'category',
       label: 'Getting Started',
       collapsed: false,
