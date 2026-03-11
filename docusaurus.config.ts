@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'FaithMade Help Center',
   tagline: 'Everything you need to build your church website.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   future: {
     v4: true,
@@ -13,6 +13,7 @@ const config: Config = {
 
   url: 'https://support.faithmade.com',
   baseUrl: '/',
+  trailingSlash: false,
 
   organizationName: 'iamandrewpeters',
   projectName: 'faithmade-docs',
@@ -52,7 +53,8 @@ const config: Config = {
       title: 'FaithMade Help',
       logo: {
         alt: 'FaithMade Logo',
-        src: 'img/logo.svg',
+        src: 'img/faithmade-wordmark.png',
+        style: {height: '32px', width: 'auto'},
       },
       items: [
         {

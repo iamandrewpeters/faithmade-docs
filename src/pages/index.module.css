@@ -1,12 +1,12 @@
-/* Hero */
+/* Hero — dark slate → teal gradient (matches HelpScout) */
 .hero {
-  background: linear-gradient(135deg, #4a9d80 0%, #69af95 60%, #7bbaa4 100%);
+  background: linear-gradient(to right, #253338 0%, #4fb193 100%);
   padding: 72px 24px 80px;
   text-align: center;
 }
 
 .heroInner {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -20,43 +20,51 @@
 
 .heroSubtitle {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.82);
   margin: 0 0 32px;
 }
 
-/* Search */
+/* Search bar — input + button */
 .searchWrap {
-  position: relative;
-  max-width: 480px;
+  display: flex;
+  max-width: 560px;
   margin: 0 auto;
-}
-
-.searchIcon {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #9ca3af;
-  pointer-events: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
 .searchInput {
-  width: 100%;
-  padding: 14px 20px 14px 46px;
+  flex: 1;
+  padding: 16px 20px;
   font-size: 1rem;
   border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
   outline: none;
   color: #1e293b;
   background: #fff;
-  box-sizing: border-box;
-  cursor: pointer;
-  transition: box-shadow 0.15s ease;
+  min-width: 0;
 }
 
-.searchInput:hover {
-  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.16);
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+.searchBtn {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  background: #4fb193;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.searchBtn:hover {
+  background: #3d9e82;
 }
 
 /* Main */
@@ -130,26 +138,30 @@
   margin: 0;
 }
 
-/* Dark mode */
+/* Dark mode — FaithMade branded */
 [data-theme='dark'] .card {
-  background: #1e2a3a;
-  border-color: #2d3f52;
-}
-
-[data-theme='dark'] .cardTitle {
-  color: #f1f5f9;
-}
-
-[data-theme='dark'] .cardDesc {
-  color: #94a3b8;
+  background: #1a2428;
+  border-color: #2a3d3a;
 }
 
 [data-theme='dark'] .card:hover {
-  border-color: #84beaa;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: #4fb193;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='dark'] .cardTitle {
+  color: #e8f5f0;
+}
+
+[data-theme='dark'] .cardDesc {
+  color: #7fa99a;
 }
 
 [data-theme='dark'] .searchInput {
-  background: #1e2a3a;
-  color: #f1f5f9;
+  background: #1a2428;
+  color: #e8f5f0;
+}
+
+[data-theme='dark'] .searchInput::placeholder {
+  color: #5a8070;
 }
