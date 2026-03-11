@@ -68,7 +68,7 @@ const config: Config = {
       title: 'FaithMade Help',
       logo: {
         alt: 'FaithMade Logo',
-        src: 'img/faithmade-wordmark.png',
+        src: 'img/logo.png',
         style: {height: '32px', width: 'auto'},
       },
       items: [
