@@ -87,8 +87,12 @@ export default function Home() {
               type="text"
               placeholder="Search the knowledge base"
               onFocus={(e) => {
-                const btn = document.querySelector('.DocSearch-Button') as HTMLElement;
+                const btn = document.querySelector('.aa-DetachedSearchButton, [class*="searchBarContainer"] button, .navbar__search-input') as HTMLElement;
                 if (btn) { e.currentTarget.blur(); btn.click(); }
+              }}
+              onChange={(e) => {
+                const input = document.querySelector('.navbar__search-input') as HTMLInputElement;
+                if (input) { input.value = e.target.value; input.dispatchEvent(new Event('input', {bubbles: true})); }
               }}
             />
             <button className={styles.searchBtn} type="button">

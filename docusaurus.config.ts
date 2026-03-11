@@ -18,6 +18,21 @@ const config: Config = {
   organizationName: 'iamandrewpeters',
   projectName: 'faithmade-docs',
 
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        docsRouteBasePath: '/',
+        searchBarPosition: 'right',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
