@@ -91,4 +91,6 @@ Apple only lets you download the .p8 key file once. If you close the page withou
 
 FaithMade will use your credentials to build and submit your app. You'll still be listed as the publisher in the App Store. Reviews, ratings, and your app listing all belong to your church.
 
-**Related:** [Overview](./overview) · [Google Play Setup](./google-play-setup) · [Launch Checklist & Timeline](./launch-checklist)
+Your app's **bundle ID** (`com.faithmade.yourdomain`) is set automatically from your website address when your first build runs — you don't choose it. See [Store Listing Assets — Your Bundle ID](./store-listing-assets#your-bundle-id) if Apple asks for it during account setup.
+
+**Related:** [Overview](./overview) · [Google Play Setup](./google-play-setup) · [Launch Checklist & Timeline](./launch-checklist) · [Store Listing Assets](./store-listing-assets)

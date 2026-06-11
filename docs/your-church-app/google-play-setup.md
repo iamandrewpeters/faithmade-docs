@@ -71,4 +71,6 @@ After this one-time setup, every future update is fully automated through the se
 
 FaithMade will use the service account to submit and update your Android app. Your church's name appears as the developer on the Play Store listing. Ratings, reviews, and your listing are yours.
 
-**Related:** [Overview](./overview) · [Apple Developer Account Setup](./apple-developer-account) · [Launch Checklist & Timeline](./launch-checklist)
+Your app's **bundle ID** (`com.faithmade.yourdomain`) is set automatically from your website address when your first build runs — you don't choose it, and it's the same ID used on both platforms. See [Store Listing Assets — Your Bundle ID](./store-listing-assets#your-bundle-id) if Google Play asks for a package name.
+
+**Related:** [Overview](./overview) · [Apple Developer Account Setup](./apple-developer-account) · [Launch Checklist & Timeline](./launch-checklist) · [Store Listing Assets](./store-listing-assets)

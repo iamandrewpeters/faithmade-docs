@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 7
 ---
 
 # Launch Checklist & Timeline
@@ -62,9 +62,12 @@ If you're on a tight timeline, Dun & Bradstreet offers expedited DUNS number pro
 
 Before FaithMade can submit your app, make sure these are in your dashboard:
 
-- App Store Connect API key (Key ID + Issuer ID + .p8 file)
-- Google Play service account key (JSON)
-- Your app icon and branding assets *(your FaithMade team will confirm what's needed)*
+- App Store Connect API key (Key ID + Issuer ID + .p8 file) — enter in **Church App → Launch → Store API Keys**
+- Google Play service account key (JSON) — upload in **Church App → Launch → Store API Keys**
+- Your app icon (defaults to your Site Icon — see [Store Listing Assets](./store-listing-assets#app-icon))
+- Screenshots generated — see [Store Listing Assets](./store-listing-assets#screenshots--automatic-at-exact-store-sizes)
 - Content connected and populated in your FaithMade site (sermons, groups, etc.)
 
-**Related:** [Overview](./overview) · [Apple Developer Account Setup](./apple-developer-account) · [Google Play Setup](./google-play-setup) · [FAQ](./faq)
+Your **bundle ID** is set automatically — you'll find it in **Church App → Launch** if a store form asks for it.
+
+**Related:** [Overview](./overview) · [Apple Developer Account Setup](./apple-developer-account) · [Google Play Setup](./google-play-setup) · [Store Listing Assets](./store-listing-assets) · [FAQ](./faq)
