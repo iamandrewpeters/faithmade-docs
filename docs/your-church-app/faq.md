@@ -1,10 +1,16 @@
 ---
-sidebar_position: 5
+sidebar_position: 10
 ---
 
 # FAQ
 
 Common questions about the church app program.
+
+## Why is my app a different color than the demo screenshots?
+
+Your app inherits your church's own brand palette from your website design settings. The demo screenshots use sample branding. Different colors mean the system is working correctly — it's pulling your church's colors into the app automatically.
+
+If the colors aren't matching your church's actual brand, check your website's design settings. Updating those will cascade into the app. See [Choosing Your Template](./choosing-your-template#colors-are-yours-not-the-demos) for more detail.
 
 ## What does this cost?
 
@@ -61,4 +67,4 @@ Contact Dun & Bradstreet directly to correct it. Apple's enrollment process will
 
 You'll receive an email from Apple or Google when your app goes live. FaithMade will also notify you — but check your own developer account too. It's your listing.
 
-**Related:** [Overview](./overview) · [Apple Developer Account Setup](./apple-developer-account) · [Google Play Setup](./google-play-setup) · [Launch Checklist & Timeline](./launch-checklist)
+**Related:** [Overview](./overview) · [Apple Developer Account Setup](./apple-developer-account) · [Google Play Setup](./google-play-setup) · [Launch Checklist & Timeline](./launch-checklist) · [Troubleshooting](./troubleshooting)
