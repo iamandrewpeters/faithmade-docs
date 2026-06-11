@@ -50,6 +50,23 @@ Google Play uses a service account for automated build submissions. This is a on
 This key file gives programmatic access to your Play Console. Don't email it or store it in a shared Google Drive folder. Upload it directly to the FaithMade dashboard and then store a backup somewhere only your team can access.
 :::
 
+## Step 4: One-Time First Release (manual — but we can do it for you)
+
+Google has no API for creating a brand-new app listing, so the very first release involves a few manual steps inside Play Console. **If you gave FaithMade Admin access in Step 2, our team does all of this for you** — you only need to know it happens:
+
+1. **Create the app** in Play Console (**All apps → Create app**: app name, default language, "App", "Free")
+2. **Complete the store listing questionnaires** — Google requires these before anything can go live:
+   - Privacy policy URL *(FaithMade provides a hosted one for your app)*
+   - App content declarations: content rating questionnaire, target audience, data safety form
+3. **Upload the first app bundle by hand** — Google requires the first `.aab` to be uploaded manually in Play Console (automated submission only works from the second release onward). FaithMade downloads your built `.aab` from the dashboard and uploads it to the **Internal testing** track, then promotes to Production.
+
+After this one-time setup, every future update is fully automated through the service account from Step 3.
+
+:::info Who does what
+**You (once):** create the account, pay $25, invite FaithMade, approve the service key.
+**FaithMade:** creates the app entry, fills the questionnaires with you, uploads the first build, automates everything after.
+:::
+
 ## What Happens Next
 
 FaithMade will use the service account to submit and update your Android app. Your church's name appears as the developer on the Play Store listing. Ratings, reviews, and your listing are yours.
