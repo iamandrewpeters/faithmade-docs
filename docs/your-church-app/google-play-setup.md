@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Google Play Setup
@@ -66,6 +66,21 @@ After this one-time setup, every future update is fully automated through the se
 **You (once):** create the account, pay $25, invite FaithMade, approve the service key.
 **FaithMade:** creates the app entry, fills the questionnaires with you, uploads the first build, automates everything after.
 :::
+
+## Step 5: Your First Android Release (One-Time Manual Upload)
+
+If you'd rather do the first upload yourself instead of granting FaithMade Admin access, here's the walkthrough. Google requires a person to upload the very first release of every app — there's no way around it, and it only happens once. Every release after this is fully automated.
+
+1. Go to [play.google.com/console](https://play.google.com/console) and sign in
+2. Click **Create app**
+3. Fill in the basics: app name, default language, select **App**, select **Free**
+4. In the left navigation, go to **Testing → Internal testing**
+5. Click **Create new release**
+6. Upload the `.aab` file — FaithMade provides a download link for it in your dashboard once your first build finishes
+7. The release name auto-fills from the `.aab` — leave it as-is
+8. Click **Save**, then **Review release**, then **Start rollout to Internal testing**
+
+That's the one-time manual step done. From here, FaithMade's service account (Step 3) handles every future release automatically — no more manual uploads.
 
 ## What Happens Next
 

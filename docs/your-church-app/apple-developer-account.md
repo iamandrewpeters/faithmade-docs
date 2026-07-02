@@ -87,10 +87,32 @@ Apple will show you three things:
 Apple only lets you download the .p8 key file once. If you close the page without downloading it, you'll need to generate a new key. Don't skip this.
 :::
 
+## Step 6: Create Your App Listing in App Store Connect
+
+This is a one-time step, and it takes about 2 minutes. It has to happen before your first build can reach TestFlight — Apple doesn't allow API keys to create app listings, so a person has to do this part manually, once.
+
+1. Go to [appstoreconnect.apple.com](https://appstoreconnect.apple.com) and sign in
+2. Click **My Apps**
+3. Click the **+** button and choose **New App**
+4. Fill in the form:
+   - **Platform:** iOS
+   - **Name:** your app's name
+   - **Primary Language:** your church's language
+   - **Bundle ID:** select the bundle ID shown in your FaithMade dashboard under **Apps → Settings**
+   - **SKU:** any unique identifier — using the same value as your Bundle ID is a safe, simple choice
+   - **User Access:** Full Access
+5. Click **Create**
+
+That's it — the listing now exists, and FaithMade's automated builds can start submitting to it.
+
+:::tip Why Apple requires this manually
+Apple's API keys (like the one you generated in Step 5) can submit builds, manage TestFlight, and update an existing listing — but they can't create a brand-new app listing from scratch. That one step always requires a human clicking through App Store Connect. Everything after this is automatic.
+:::
+
 ## What Happens Next
 
 FaithMade will use your credentials to build and submit your app. You'll still be listed as the publisher in the App Store. Reviews, ratings, and your app listing all belong to your church.
 
 Your app's **bundle ID** (`com.faithmade.yourdomain`) is set automatically from your website address when your first build runs — you don't choose it. See [Store Listing Assets — Your Bundle ID](./store-listing-assets#your-bundle-id) if Apple asks for it during account setup.
 
-**Related:** [Overview](./overview) · [Google Play Setup](./google-play-setup) · [Launch Checklist & Timeline](./launch-checklist) · [Store Listing Assets](./store-listing-assets)
+**Related:** [Overview](./overview) · [Enable Push Notifications on iOS](./apple-push-key) · [Google Play Setup](./google-play-setup) · [Launch Checklist & Timeline](./launch-checklist) · [Store Listing Assets](./store-listing-assets)
