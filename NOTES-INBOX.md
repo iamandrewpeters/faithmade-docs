@@ -24,11 +24,16 @@ vars so EAS creates dist cert + provisioning profile + APNs push key inside the 
 on first build. If a first iOS build fails on credentials, check the ASC key role
 (App Manager minimum) and the agreement banner above.
 
-### [INTERNAL] Android push needs per-app Firebase registration
-Expo Push on Android requires google-services.json per package name + FCM service
-account in EAS. Not wired yet — apps build and run fine, push silently no-ops on
-Android until this is provisioned (iOS unaffected). Automate later via Firebase
-Management API on the build server.
+### [INTERNAL] Android push is fully automated via the house Firebase project (July 2)
+One FaithMade-owned Firebase project (`faithmade-church-apps`, admin SA key at
+/opt/faithmade-build-server/firebase-admin-key.json) serves ALL church apps —
+Firebase is NOT tied to Play ownership, so this holds under church-owned Play
+accounts too. The build server registers each package via the Firebase
+Management API, bundles google-services.json into the build (cached under
+/opt/faithmade-build-server/google-services/), and upserts the FCM v1 service
+key into EAS credentials post-build. Churches never see Firebase. iOS push
+remains per-church: APNs key pasted into the Launch tab (see apple-push-key.md
+guide) → build server upserts to EAS.
 
 ### [INTERNAL] Play first release is manual, forever
 Google has no API for first-time app creation/publishing: create app record, content

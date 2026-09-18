@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://support.faithmade.com',
+  url: 'https://help.faithmade.com',
   baseUrl: '/',
   trailingSlash: false,
 
@@ -31,6 +31,12 @@ const config: Config = {
         explicitSearchResultPath: true,
       },
     ],
+  ],
+
+  // The helpdesk widget, on every KB page. Same origin now that the KB and the
+  // portal share help.faithmade.com, so no CORS involved.
+  scripts: [
+    { src: '/widget.js', async: true, defer: true, 'data-brand': 'faithmade' },
   ],
 
   onBrokenLinks: 'throw',
@@ -73,8 +79,8 @@ const config: Config = {
       },
       items: [
         {
-          href: 'https://faithmade.com',
-          label: 'Back to FaithMade',
+          href: 'https://help.faithmade.com/portal',
+          label: 'My requests',
           position: 'right',
         },
       ],
