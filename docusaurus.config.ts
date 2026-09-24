@@ -79,7 +79,17 @@ const config: Config = {
       },
       items: [
         {
-          href: 'https://help.faithmade.com/portal',
+          // Same host, same tab. An absolute URL made Docusaurus treat this as
+          // an external link: new tab plus the external-link icon. `to` and a
+          // relative `href` both fail the broken-link check, because /portal is
+          // served by the helpdesk app, not by Docusaurus. `pathname://` is
+          // Docusaurus's own escape hatch for "a path on this host I do not own".
+          href: 'pathname:///portal',
+          target: '_self',
+          // Docusaurus still draws its external-link icon on any `href` item,
+          // labelled "(opens in new tab)", which is false here. Hidden in
+          // custom.css; display:none also drops the false label for readers.
+          className: 'portal-link',
           label: 'My requests',
           position: 'right',
         },

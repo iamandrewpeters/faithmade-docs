@@ -33,3 +33,10 @@
   border-top: 1px solid var(--ifm-color-emphasis-200);
   background: #f8f9fa;
 }
+
+/* "My requests" goes to the helpdesk portal on this same host, in the same tab.
+   Docusaurus marks every href navbar item as external; that icon and its
+   "(opens in new tab)" label would both be wrong. */
+.portal-link svg {
+  display: none;
+}
