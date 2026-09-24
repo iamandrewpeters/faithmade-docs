@@ -1,37 +1,155 @@
-/* FaithMade brand — primary: #69af95 */
+/* ---------------------------------------------------------------------------
+   FaithMade Help: theme.
+
+   No brand colour or typeface is written in this repo. They come from
+   /brand/faithmade.css, served by the helpdesk app on this same host and
+   generated from helpdesk apps/desk/src/lib/brand-tokens.ts, the one place the
+   brand's values live. Change them THERE; the KB picks them up within five
+   minutes, no rebuild. This file only maps Docusaurus's --ifm-* variables onto
+   those --c-* tokens.
+
+   The header below mirrors the helpdesk portal's header (portal.css, .fmh), so
+   the KB and the portal read as one site. Change both together.
+
+   Light only, like the portal: the brand has no dark palette.
+--------------------------------------------------------------------------- */
 :root {
-  --ifm-color-primary: #69af95;
-  --ifm-color-primary-dark: #57a486;
-  --ifm-color-primary-darker: #4e9d7f;
-  --ifm-color-primary-darkest: #3d8168;
-  --ifm-color-primary-light: #7bbaa4;
-  --ifm-color-primary-lighter: #84beaa;
-  --ifm-color-primary-lightest: #a3cfc0;
+  --ifm-color-primary: var(--c-brand-dk);
+  --ifm-color-primary-dark: color-mix(in srgb, var(--c-brand-dk) 90%, var(--c-ink));
+  --ifm-color-primary-darker: color-mix(in srgb, var(--c-brand-dk) 82%, var(--c-ink));
+  --ifm-color-primary-darkest: color-mix(in srgb, var(--c-brand-dk) 68%, var(--c-ink));
+  --ifm-color-primary-light: var(--c-brand);
+  --ifm-color-primary-lighter: color-mix(in srgb, var(--c-brand) 80%, #fff);
+  --ifm-color-primary-lightest: color-mix(in srgb, var(--c-brand) 60%, #fff);
+
+  --ifm-background-color: var(--c-bg);
+  --ifm-background-surface-color: var(--c-surface);
+  --ifm-font-color-base: var(--c-ink);
+  --ifm-heading-color: var(--c-ink);
+  --ifm-color-content-secondary: var(--c-ink-2);
+  --ifm-font-family-base: var(--c-body);
+  --ifm-heading-font-family: var(--c-head);
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.7;
+  --ifm-heading-font-weight: 700;
+  --ifm-toc-border-color: var(--c-line);
+  --ifm-hr-border-color: var(--c-line);
+  --ifm-color-emphasis-200: var(--c-line);
+  --ifm-color-emphasis-300: var(--c-line);
+
+  /* Links: ink text with a green underline, not green text. Green text on the
+     cream ground is too faint to read comfortably; the underline keeps the
+     brand colour doing the signalling. */
+  --ifm-link-color: var(--c-ink);
+  --ifm-link-hover-color: var(--c-brand-dk);
+  --ifm-link-decoration: underline;
+
+  --ifm-navbar-height: 60px;
+  --ifm-navbar-background-color: var(--c-surface);
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-link-color: var(--c-ink-2);
+  --ifm-navbar-link-hover-color: var(--c-ink);
+  --ifm-navbar-link-active-color: var(--c-brand-dk);
+  --ifm-navbar-search-input-background-color: var(--c-bg);
+  --ifm-navbar-search-input-color: var(--c-ink);
+  --ifm-navbar-search-input-placeholder-color: var(--c-ink-2);
+
+  --ifm-menu-color: var(--c-ink);
+  --ifm-menu-color-active: var(--c-ink);
+  --ifm-menu-color-background-active: var(--c-soft);
+  --ifm-menu-color-background-hover: color-mix(in srgb, var(--c-soft) 60%, transparent);
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ifm-code-background: color-mix(in srgb, var(--c-line) 45%, var(--c-surface));
+  --docusaurus-highlighted-code-line-bg: color-mix(in srgb, var(--c-brand) 14%, transparent);
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #84beaa;
-  --ifm-color-primary-dark: #71b59e;
-  --ifm-color-primary-darker: #67b098;
-  --ifm-color-primary-darkest: #4a9f84;
-  --ifm-color-primary-light: #97c7b6;
-  --ifm-color-primary-lighter: #a1ccbc;
-  --ifm-color-primary-lightest: #bed9d1;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+body {
+  background: var(--c-bg);
 }
 
-.navbar {
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+a {
+  text-decoration-color: color-mix(in srgb, var(--c-brand) 70%, transparent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration-color: var(--c-brand-dk);
+}
+
+/* Headings in Ubuntu, body copy in Lora. */
+h1, h2, h3, h4, h5, h6,
+.menu, .navbar, .pagination-nav, .table-of-contents, .breadcrumbs, .footer,
+button, input, kbd {
+  font-family: var(--c-head);
+}
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2rem;
+  text-wrap: balance;
+}
+.markdown kbd {
+  background: var(--c-bg);
+  border: 1px solid var(--c-line);
+  border-radius: 5px;
   box-shadow: none;
+  padding: 2px 7px;
+  font-size: 0.8em;
 }
 
+/* ---------- Header: mirrors the portal's .fmh ---------- */
+.navbar {
+  border-bottom: 1px solid var(--c-line);
+  box-shadow: none;
+  padding: 0 20px;
+}
+.navbar__brand {
+  gap: 12px;
+}
+.navbar__logo {
+  height: 28px;
+  margin-right: 0;
+}
+.navbar__logo img {
+  height: 28px;
+}
+.navbar__title {
+  font: 700 16px/1 var(--c-head);
+  color: var(--c-ink);
+}
+.navbar__link {
+  font: 500 15px/1 var(--c-head);
+  padding: 9px 12px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.navbar__link:hover {
+  background: var(--c-bg);
+  text-decoration: none;
+}
+.navbar__link--active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--c-brand);
+  border-radius: 2px;
+  margin: 6px 0 -8px;
+}
 
-.footer--light {
-  border-top: 1px solid var(--ifm-color-emphasis-200);
-  background: #f8f9fa;
+/* The local-search box, drawn as the same pill the portal uses. */
+.navbar__search-input {
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  width: 200px;
+  height: 36px;
+  font: 14px/1 var(--c-head);
+  color: var(--c-ink);
+}
+.navbar__search-input:focus {
+  border-color: var(--c-brand);
+  outline: none;
+}
+.navbar__search-input::placeholder {
+  color: var(--c-ink-2);
 }
 
 /* "My requests" goes to the helpdesk portal on this same host, in the same tab.
@@ -39,4 +157,37 @@
    "(opens in new tab)" label would both be wrong. */
 .portal-link svg {
   display: none;
+}
+
+/* ---------- Sidebar ---------- */
+/* Its border already follows --ifm-toc-border-color, mapped above. */
+.theme-doc-sidebar-container {
+  background: var(--c-surface);
+}
+.menu__link {
+  font-size: 14.5px;
+  text-decoration: none;
+}
+.menu__link--active {
+  font-weight: 600;
+}
+.menu__link--active:not(.menu__link--sublist) {
+  box-shadow: inset 3px 0 0 var(--c-brand);
+}
+
+/* ---------- Footer ---------- */
+.footer--light {
+  border-top: 1px solid var(--c-line);
+  background: var(--c-surface);
+}
+.footer__link-item {
+  text-decoration: none;
+}
+
+/* Search-term highlights, in the brand's green rather than the default yellow. */
+mark {
+  background: color-mix(in srgb, var(--c-brand) 32%, transparent);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 1px;
 }

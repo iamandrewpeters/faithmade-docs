@@ -81,27 +81,28 @@ export default function Home() {
           <p className={styles.heroSubtitle}>
             Search our help center or browse topics below.
           </p>
-          <div className={styles.searchWrap}>
+          {/* A plain GET form to the local-search results page (/search?q=).
+              It used to be an input whose onFocus blurred itself and clicked
+              the navbar search instead, so on a desktop-width window clicking
+              it did nothing, and its Search button had no handler at all. */}
+          <form className={styles.searchWrap} action="/search" method="get" role="search">
+            <label htmlFor="hero-q" className={styles.srOnly}>Search the knowledge base</label>
             <input
+              id="hero-q"
               className={styles.searchInput}
-              type="text"
+              type="search"
+              name="q"
               placeholder="Search the knowledge base"
-              onFocus={(e) => {
-                const btn = document.querySelector('.aa-DetachedSearchButton, [class*="searchBarContainer"] button, .navbar__search-input') as HTMLElement;
-                if (btn) { e.currentTarget.blur(); btn.click(); }
-              }}
-              onChange={(e) => {
-                const input = document.querySelector('.navbar__search-input') as HTMLInputElement;
-                if (input) { input.value = e.target.value; input.dispatchEvent(new Event('input', {bubbles: true})); }
-              }}
+              autoComplete="off"
+              required
             />
-            <button className={styles.searchBtn} type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}}>
+            <button className={styles.searchBtn} type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}} aria-hidden="true">
                 <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
               </svg>
               Search
             </button>
-          </div>
+          </form>
         </div>
       </div>
 

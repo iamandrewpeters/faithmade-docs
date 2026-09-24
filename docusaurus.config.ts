@@ -39,6 +39,19 @@ const config: Config = {
     { src: '/widget.js', async: true, defer: true, 'data-brand': 'faithmade' },
   ],
 
+  // Brand values are NOT written in this repo. /brand/faithmade.css is served by
+  // the helpdesk app on this same host, generated from its brand-tokens.ts, and
+  // src/css/custom.css maps Docusaurus's theme onto it. Same file the portal and
+  // the widget read, so the KB can never drift to its own green again.
+  headTags: [
+    { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
+    { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' } },
+  ],
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Ubuntu:wght@400;500;700&display=swap',
+    '/brand/faithmade.css',
+  ],
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -66,18 +79,28 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/faithmade-social-card.jpg',
+    // Light only, like the portal: the brand has no dark palette, and a dark KB
+    // next to a light portal on one host would read as two sites.
     colorMode: {
       defaultMode: 'light',
-      respectPrefersColorScheme: true,
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'FaithMade Help',
       logo: {
         alt: 'FaithMade Logo',
         src: 'img/logo.png',
-        style: {height: '32px', width: 'auto'},
+        style: {height: '28px', width: 'auto'},
       },
       items: [
+        {
+          // Matches the portal header: Help center, then My requests.
+          to: '/',
+          label: 'Help center',
+          position: 'right',
+          activeBaseRegex: '^/(?!portal)',
+        },
         {
           // Same host, same tab. An absolute URL made Docusaurus treat this as
           // an external link: new tab plus the external-link icon. `to` and a
