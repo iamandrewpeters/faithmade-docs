@@ -95,11 +95,20 @@ const config: Config = {
       },
       items: [
         {
-          // Matches the portal header: Help center, then My requests.
+          // Matches the portal header: Help center, Ideas, then My requests.
           to: '/',
           label: 'Help center',
           position: 'right',
           activeBaseRegex: '^/(?!portal)',
+        },
+        {
+          // The ideas board, served by the helpdesk app like /portal: the same
+          // pathname:// escape hatch, same tab, and no external-link icon.
+          href: 'pathname:///ideas',
+          target: '_self',
+          className: 'portal-link',
+          label: 'Ideas',
+          position: 'right',
         },
         {
           // Same host, same tab. An absolute URL made Docusaurus treat this as
