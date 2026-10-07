@@ -87,7 +87,6 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'FaithMade Help',
       logo: {
         alt: 'FaithMade Logo',
         src: 'img/logo.png',
